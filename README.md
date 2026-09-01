@@ -8,6 +8,7 @@ A clean, modern WCA Rubik's cube timer for all official events. Built with Vue 3
 
 - ⏱️ **Precision Timer** — Sub-millisecond accuracy with spacebar or touch input
 - 🔀 **WCA Scrambles** — Random-state scrambles for all 17 official WCA events via [cubing.js](https://js.cubing.net/)
+- 🧩 **Scramble Visualization** — Toggle a 2D cube net showing the scrambled state for 15 of the 17 events
 - 👁️ **Optional Inspection** — 15-second WCA inspection countdown with +2/DNF penalties
 - 📊 **Statistics** — ao5, ao12, ao50, ao100, best singles, session means
 - 📋 **Sessions** — Multiple solve sessions per event with full history

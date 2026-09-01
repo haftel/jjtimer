@@ -57,6 +57,15 @@ The core timer transitions through the following discrete states:
 - **Pre-generation**: The next scramble is pre-generated in the background while a solve is running or immediately when entering the `ready` state, ensuring zero latency between solves.
 - Previous scramble display and scramble copy-to-clipboard functionality.
 
+#### 4.3.1 Scramble Visualization (Cube Net)
+
+- A **2D cube net image** can be toggled open via a button in the header toolbar, appearing in a collapsible strip immediately below the header bar.
+- The net is rendered by the `cubing.js` `<twisty-player>` Web Component in `visualization="2D"` mode, showing the exact sticker state of the puzzle after applying the current scramble.
+- The net updates automatically whenever the scramble or event changes.
+- **Supported puzzles**: 3x3x3 (and BLD/FMC/OH variants), 2x2x2, 4x4x4 (and BLD), 5x5x5 (and BLD), 6x6x6, 7x7x7, Megaminx, Pyraminx, Skewb, Square-1.
+- **Unsupported puzzles**: Rubik's Clock (`clock`) and 3x3x3 Multi-Blind (`333mbf`) — the net strip is hidden automatically for these events.
+- No controls are shown on the player (playback and hint facelets are disabled) — the net is a static reference image only.
+
 ### 4.4 Supported WCA Events
 
 jjTimer supports all 17 official WCA events:
@@ -133,7 +142,8 @@ jjTimer supports all 17 official WCA events:
 
 - **Visual Style**: Dark theme with high contrast, modern typography (monospace digits for timer), minimal distraction.
 - **Layout Structure**:
-  - **Header / Scramble Bar**: Event selector, current scramble with large readable font, copy scramble button, next scramble button.
+  - **Header / Scramble Bar**: Event selector, current scramble with large readable font, new scramble button, scramble visualization toggle button, stats/settings buttons.
+  - **Scramble Visualization Strip** *(collapsible)*: A 2D cube net image rendered by `cubing.js` showing the scrambled puzzle state, toggled by the cube net button in the header. Hidden by default; automatically hidden for unsupported events (Clock, MBLD).
   - **Main Area**: Centered high-precision timer display and status indicators (inspection warnings, ready state color transitions).
   - **Left Panel (Solves History)**: Collapsible list of solves in current session. Clicking any solve opens quick action options (No penalty, +2, DNF, Delete).
   - **Right Panel (Statistics & Settings)**: Collapsible summary of best single, current single, ao5, ao12, ao50, ao100, mo3, session statistics, and app settings.

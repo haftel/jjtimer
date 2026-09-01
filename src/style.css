@@ -151,6 +151,20 @@ body {
   flex-shrink: 0;
 }
 
+/* Collapsible scramble visualization strip below the header */
+.scramble-net-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-2) var(--space-4);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  overflow: hidden;
+  /* Fixed height prevents layout shift when loading */
+  min-height: 176px;
+}
+
 .app-logo {
   font-family: var(--font-mono);
   font-size: var(--text-lg);
