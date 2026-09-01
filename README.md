@@ -52,7 +52,7 @@ npm run preview
 
 ## Deployment
 
-The app automatically deploys to GitHub Pages when changes are pushed to the `main` branch. The CI/CD pipeline is configured in `.github/workflows/deploy.yml`.
+The app automatically deploys to GitHub Pages when changes are pushed to the `master` branch. The CI/CD pipeline is configured in `.github/workflows/deploy.yml`.
 
 ## License
 
